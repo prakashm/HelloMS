@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  node:
+    image: docker.io/prakashvit/hey-nodejs:0.0.1.RELEASE
+    build: ./node/hey-NodeJs
+    ports:
+      - "3001:3001"
+    volumes:
+      - .:/code
+  python:
+    image: docker.io/prakashvit/hey-python:0.0.1.RELEASE
+    build: ./python/hey-python
+    ports:
+      - "3002:3002"
+    volumes:
+      - .:/code
+  netCore:
+    image: docker.io/prakashvit/hey-netcore:0.0.1.RELEASE
+    build: ./netCore/hey-netCore
+    ports:
+      - "3003:3003"
+    volumes:
+      - .:/code
